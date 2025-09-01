@@ -19,9 +19,9 @@ function ChatBot() {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://127.0.0.1:5000/chat", {
-        message: input,
-      });
+      const res = await axios.post("https://chatbotbilal-backend.onrender.com/chat", {
+      message: input,
+    });
       const botMessage = { sender: "bot", text: res.data.reply };
       setMessages((prev) => [...prev, botMessage]);
     } catch {
