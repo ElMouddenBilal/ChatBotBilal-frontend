@@ -19,7 +19,7 @@ function ChatBot() {
     setLoading(true);
 
     try {
-      const res = await axios.post("https://chatbotbilal-backend.onrender.com/chat", {
+      const res = await axios.post("https://chatbotbilal-backend-4.onrender.com/", {
       message: input,
     });
       const botMessage = { sender: "bot", text: res.data.reply };
